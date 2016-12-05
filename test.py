@@ -11,7 +11,7 @@ from sklearn.metrics import precision_score, accuracy_score
 
 
 
-mlp = MLPClassifier(hidden_layer_sizes=(100,),activation='logistic',solver='sgd')
+mlp = MLPClassifier(hidden_layer_sizes=(100,),activation='logistic',solver='adam',max_iter=10000)
 
 clf = BaggingClassifier(base_estimator=mlp,n_estimators=5)
 
