@@ -35,6 +35,9 @@ df = df.drop('species',1)
 # transform dataframe to a numpy array
 examples = df.as_matrix()
 
+scalar = StandardScaler()
+
+examples = scalar.fit(examples)
 
 #create the classifier
 
