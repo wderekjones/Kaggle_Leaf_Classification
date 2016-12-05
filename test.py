@@ -13,7 +13,7 @@ from sklearn.metrics import precision_score, accuracy_score
 
 mlp = MLPClassifier(hidden_layer_sizes=(200,),activation='relu',solver='adam',max_iter=10000,shuffle=True)
 
-clf = BaggingClassifier(base_estimator=mlp,n_estimators=10,max_samples=0.3)
+clf = BaggingClassifier(base_estimator=mlp,n_estimators=10)
 
 df = pd.read_csv('train.csv')
 
