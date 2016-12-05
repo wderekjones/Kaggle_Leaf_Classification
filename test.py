@@ -11,9 +11,9 @@ from sklearn.metrics import precision_score, accuracy_score
 
 
 
-mlp = MLPClassifier(hidden_layer_sizes=(100,),activation='logistic',solver='adam',max_iter=10000,shuffle=True)
+mlp = MLPClassifier(hidden_layer_sizes=(10,),activation='logistic',solver='adam',max_iter=10000,shuffle=True)
 
-clf = BaggingClassifier(base_estimator=mlp,n_estimators=10)
+clf = BaggingClassifier(base_estimator=mlp,n_estimators=10,max_samples=0.3)
 
 df = pd.read_csv('train.csv')
 
