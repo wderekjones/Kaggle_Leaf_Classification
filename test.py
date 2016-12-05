@@ -40,7 +40,7 @@ examples = df.as_matrix()
 
 scalar = StandardScaler()
 
-examples = scalar.fit(examples)
+examples = scalar.fit_transform(examples)
 
 #create the classifier
 
